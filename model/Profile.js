@@ -31,7 +31,7 @@ const ProfileSchema = new Schema({
   },
   bio: {
     type: String,
-    required: true
+    required: false
   },
   githubusername: {
     type: String
@@ -54,7 +54,7 @@ const ProfileSchema = new Schema({
         required: true
       },
       to: {
-        type: Date0
+        type: Date
       },
       current: {
         type: Boolean,
