@@ -13,6 +13,7 @@
   "author": "Praisy",
   "license": "MIT",
   "dependencies": {
+    "@brainhubeu/react-carousel": "^1.10.17",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "concurrently": "^4.1.1",
