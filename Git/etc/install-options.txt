@@ -2,6 +2,7 @@ Editor Option: VIM
 Custom Editor Path: 
 Path Option: Cmd
 SSH Option: OpenSSH
+Tortoise Option: false
 CURL Option: OpenSSL
 CRLF Option: CRLFAlways
 Bash Terminal Option: MinTTY

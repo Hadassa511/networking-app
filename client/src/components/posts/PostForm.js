@@ -15,8 +15,10 @@ class PostForm extends Component {
     this.onSubmit = this.onSubmit.bind(this);
   }
 
-  onChange(e) {
-    this.setState({ [e.target.name]: e.target.value });
+  componentWillReceiveProps(newProps) {
+    if (newProps.errors) {
+      this.setState({ errors: newProps.errors });
+    }
   }
   onSubmit(e) {
     e.preventDefault();
@@ -26,8 +28,14 @@ class PostForm extends Component {
       name: user.name,
       avatar: user.avatar
     };
+
+    this.props.addPost(newPost);
+    this.setState({ text: '' });
   }
 
+  onChange(e) {
+    this.setState({ [e.target.name]: e.target.value });
+  }
   render() {
     const { errors } = this.state;
     return (
@@ -44,10 +52,10 @@ class PostForm extends Component {
                   onChange={this.onChange}
                   error={errors.text}
                 />
-                <button type="submit" className="btn btn-dark">
-                  Submit
-                </button>
               </div>
+              <button type="submit" className="btn btn-dark">
+                Submit
+              </button>
             </form>
           </div>
         </div>
